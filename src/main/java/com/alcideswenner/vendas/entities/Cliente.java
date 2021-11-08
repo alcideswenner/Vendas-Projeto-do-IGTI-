@@ -31,6 +31,9 @@ public class Cliente {//
 	public Cliente() {
 	}
 	
+	public Cliente(int id) {
+	}
+	
 	public int getId() {
 		return id;
 	}

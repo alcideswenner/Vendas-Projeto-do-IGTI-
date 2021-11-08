@@ -23,16 +23,20 @@ public class Compras {
 	@JoinColumn(name = "cliente_id")//chave estrangeira
 	private Cliente cliente;//relacionadas a um cliente
 	
-	public Compras(int id, Double totalCompra, LocalDate dataCompra) {
+	public Compras(int id, Double totalCompra, LocalDate dataCompra,Cliente cliente) {//adicionei
 		this.id = id;
 		this.totalCompra = totalCompra;
 		this.dataCompra = dataCompra;
+		this.cliente=cliente;//adicionei
 	}
 	
 	public Compras() {
 
 	}
 	
+	public Compras(int id) {//adicionei
+
+	}
 	
 	public int getId() {
 		return id;
@@ -52,6 +56,15 @@ public class Compras {
 	public void setDataCompra(LocalDate dataCompra) {
 		this.dataCompra = dataCompra;
 	}
+
+	public Cliente getCliente() {//adicionei
+		return cliente;
+	}
+
+	public void setCliente(Cliente cliente) {//adicionei
+		this.cliente = cliente;
+	}
+	
 	
 	
 	
